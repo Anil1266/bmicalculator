@@ -2,117 +2,136 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Free BMI Calculator for Indian Adults 2026 | Body Mass Index Tool</title>
-<meta name="description" content="Free BMI Calculator for Indian adults. Check your Body Mass Index instantly, understand BMI categories and healthy weight range.">
+<title>Free BMI Calculator for Indian Adults 2026</title>
+<meta name="description" content="Free BMI Calculator for Indian adults. Check your Body Mass Index instantly and know your healthy weight range.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Anil BMI Calculator",
-  "url": "https://anil1266.github.io/bmicalculator/",
-  "description": "Free BMI Calculator for Indian adults to check Body Mass Index and healthy weight range.",
-  "publisher": {
-    "@type": "Person",
-    "name": "Anil"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "BMI Calculator",
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "All",
-  "url": "https://anil1266.github.io/bmicalculator/",
-  "description": "Free online BMI calculator tool for Indian adults.",
-  "creator": {
-    "@type": "Person",
-    "name": "Anil"
-  }
-}
-</script>
-  
 <link rel="canonical" href="https://anil1266.github.io/bmicalculator/">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #4facfe;
+    outline: none;
+    box-shadow: 0 0 5px #4facfe;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a {
+    color: #4facfe;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #aaa;
+}
+</style>
 </head>
 
-<body style="font-family: Arial; margin: 0; background: #f4f4f4;">
+<body>
 
-<div style="max-width: 800px; margin: auto; padding: 20px; background: white;">
+<div class="container">
 
 <h1>Free BMI Calculator for Indian Adults</h1>
 
-<p>Welcome to our free Body Mass Index (BMI) Calculator designed specifically for Indian adults. This tool helps you quickly determine whether your weight falls within a healthy range based on your height.</p>
+<p>Use this free BMI calculator to instantly check your Body Mass Index and understand your healthy weight category.</p>
 
-<div style="background:#e9f5ff;padding:20px;border-radius:10px;margin-top:20px;">
+<div class="card">
 
 <h2>Calculate Your BMI</h2>
 
-<input type="number" id="weight" placeholder="Weight (kg)" style="padding:10px;width:100%;margin-bottom:10px;">
-<input type="number" id="height" placeholder="Height (cm)" style="padding:10px;width:100%;margin-bottom:10px;">
-<button onclick="calculateBMI()" style="padding:10px;width:100%;background:#4facfe;color:white;border:none;border-radius:5px;">Calculate BMI</button>
+<input type="number" id="weight" placeholder="Enter Weight (kg)">
+<input type="number" id="height" placeholder="Enter Height (cm)">
 
-<div id="result" style="margin-top:15px;font-weight:bold;"></div>
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<div class="result" id="result"></div>
 
 </div>
 
-<h2>What is BMI?</h2>
+<div class="card">
 
-<p>Body Mass Index (BMI) is a simple calculation using a person’s height and weight. It is commonly used to classify individuals as underweight, normal weight, overweight, or obese.</p>
+<h2>About BMI</h2>
 
-<p>BMI Formula:</p>
-<p><strong>BMI = Weight (kg) / Height (m²)</strong></p>
-
-<h2>BMI Categories for Indian Adults</h2>
+<p>Body Mass Index (BMI) is a simple formula that uses your height and weight to estimate whether you are underweight, normal, overweight, or obese.</p>
 
 <ul>
 <li>Below 18.5 – Underweight</li>
-<li>18.5 – 22.9 – Normal weight</li>
+<li>18.5 – 22.9 – Normal</li>
 <li>23 – 24.9 – Overweight</li>
-<li>25 and above – Obese</li>
+<li>25+ – Obese</li>
 </ul>
 
-<p>Indian BMI standards are slightly stricter because health risks such as diabetes and heart disease may occur at lower BMI levels in Asian populations.</p>
+<p>Learn more in our <a href="what-is-bmi.html">Complete BMI Guide</a>.</p>
 
-<h2>Why Maintaining a Healthy BMI is Important</h2>
+<p>Read <a href="healthy-weight-tips.html">Healthy Weight Tips</a> to improve your lifestyle.</p>
 
-<p>Maintaining a healthy BMI can reduce the risk of several lifestyle diseases including:</p>
+<p>Explore <a href="products.html">Recommended Fitness Products</a>.</p>
 
-<ul>
-<li>Heart disease</li>
-<li>High blood pressure</li>
-<li>Type 2 diabetes</li>
-<li>Joint problems</li>
-</ul>
+</div>
 
-<h2>Healthy Weight Tips</h2>
-
-<p>Maintaining a healthy body weight requires balanced nutrition, regular exercise, adequate sleep, and stress management. Small consistent lifestyle improvements can make a big difference.</p>
-
-<p>For more detailed guidance, read:</p>
-
-<p>
-<a href="what-is-bmi.html">Complete Guide: What is BMI?</a> |
-<a href="healthy-weight-tips.html">Healthy Weight Tips for Indian Adults</a>
-</p>
-
-<p>
-You can also explore our 
-<a href="products.html">Recommended Fitness Products</a>
-to support your fitness journey.
-</p>
-
-<hr>
-
-<p style="font-size:14px;">
-Contact: <a href="mailto:anilvella999@gmail.com">anilvella999@gmail.com</a>
-</p>
-
-<p style="font-size:13px;color:gray;">
+<div class="footer">
+Contact: <a href="mailto:anilvella999@gmail.com">anilvella999@gmail.com</a><br>
 © 2026 Anil BMI Calculator
-</p>
+</div>
 
 </div>
 
@@ -144,4 +163,3 @@ document.getElementById("result").innerHTML =
 
 </body>
 </html>
-
