@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 20px;
 }
@@ -25,8 +25,9 @@ body {
     background-color: #1e1e1e;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
     margin-top: 20px;
+    border: 1px solid #2a2a2a;
+    text-align: center;
 }
 
 input {
@@ -35,7 +36,7 @@ input {
     margin-bottom: 10px;
     border-radius: 6px;
     border: 1px solid #333;
-    background-color: #2a2a2a;
+    background-color: #222;
     color: white;
     font-size: 16px;
 }
@@ -69,6 +70,22 @@ button:hover {
     font-size: 18px;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+th {
+    background-color: #222;
+}
+
 a {
     color: #4facfe;
     text-decoration: none;
@@ -82,6 +99,7 @@ a:hover {
     margin-top: 40px;
     font-size: 14px;
     color: #aaa;
+    text-align: center;
 }
 </style>
 </head>
@@ -90,9 +108,11 @@ a:hover {
 
 <div class="container">
 
-<h1>Free BMI Calculator for Indian Adults</h1>
+<h1 style="text-align:center;">Free BMI Calculator for Indian Adults</h1>
 
-<p>Use this free BMI calculator to instantly check your Body Mass Index and understand your healthy weight category.</p>
+<p style="text-align:center;">
+Use this free BMI calculator to instantly check your Body Mass Index and understand your healthy weight category.
+</p>
 
 <div class="card">
 
@@ -111,45 +131,51 @@ a:hover {
 
 <h2>About BMI</h2>
 
-<p>Body Mass Index (BMI) is a simple formula that uses your height and weight to estimate whether you are underweight, normal, overweight, or obese.</p>
+<p>
+Body Mass Index (BMI) is a simple formula that uses your height and weight to estimate whether you are underweight, normal, overweight, or obese.
+</p>
 
-<table style="width:100%; border-collapse: collapse; margin-top:15px;">
-<tr style="background-color:#222;">
-<th style="padding:10px; border:1px solid #333;">BMI Range</th>
-<th style="padding:10px; border:1px solid #333;">Category</th>
-<th style="padding:10px; border:1px solid #333;">Health Risk</th>
+<table>
+<tr>
+<th>BMI Range</th>
+<th>Category</th>
+<th>Health Risk</th>
 </tr>
 
 <tr>
-<td style="padding:10px; border:1px solid #333;">Below 18.5</td>
-<td style="padding:10px; border:1px solid #333; color:#4fc3f7;">Underweight</td>
-<td style="padding:10px; border:1px solid #333;">Nutritional deficiency risk</td>
+<td>Below 18.5</td>
+<td style="color:#4fc3f7;">Underweight</td>
+<td>Nutritional deficiency risk</td>
 </tr>
 
 <tr>
-<td style="padding:10px; border:1px solid #333;">18.5 – 22.9</td>
-<td style="padding:10px; border:1px solid #333; color:#66bb6a;">Normal</td>
-<td style="padding:10px; border:1px solid #333;">Low health risk</td>
+<td>18.5 – 22.9</td>
+<td style="color:#66bb6a;">Normal</td>
+<td>Low health risk</td>
 </tr>
 
 <tr>
-<td style="padding:10px; border:1px solid #333;">23 – 24.9</td>
-<td style="padding:10px; border:1px solid #333; color:#ffa726;">Overweight</td>
-<td style="padding:10px; border:1px solid #333;">Moderate risk</td>
+<td>23 – 24.9</td>
+<td style="color:#ffa726;">Overweight</td>
+<td>Moderate risk</td>
 </tr>
 
 <tr>
-<td style="padding:10px; border:1px solid #333;">25 and above</td>
-<td style="padding:10px; border:1px solid #333; color:#ef5350;">Obese</td>
-<td style="padding:10px; border:1px solid #333;">High risk of lifestyle diseases</td>
+<td>25 and above</td>
+<td style="color:#ef5350;">Obese</td>
+<td>High risk of lifestyle diseases</td>
 </tr>
 </table>
 
-<p>Learn more in our <a href="what-is-bmi.html">Complete BMI Guide</a>.</p>
+<p style="margin-top:20px;">
+Indian BMI standards are slightly stricter because health risks such as diabetes and heart disease may occur at lower BMI levels in Asian populations.
+</p>
 
-<p>Read <a href="healthy-weight-tips.html">Healthy Weight Tips</a> to improve your lifestyle.</p>
-
-<p>Explore <a href="products.html">Recommended Fitness Products</a>.</p>
+<p>
+Learn more in our <a href="what-is-bmi.html">Complete BMI Guide</a>.<br>
+Read <a href="healthy-weight-tips.html">Healthy Weight Tips</a>.<br>
+Explore <a href="products.html">Recommended Fitness Products</a>.
+</p>
 
 </div>
 
@@ -188,4 +214,3 @@ document.getElementById("result").innerHTML =
 
 </body>
 </html>
-
