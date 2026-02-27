@@ -113,12 +113,37 @@ a:hover {
 
 <p>Body Mass Index (BMI) is a simple formula that uses your height and weight to estimate whether you are underweight, normal, overweight, or obese.</p>
 
-<ul>
-<li>Below 18.5 – Underweight</li>
-<li>18.5 – 22.9 – Normal</li>
-<li>23 – 24.9 – Overweight</li>
-<li>25+ – Obese</li>
-</ul>
+<table style="width:100%; border-collapse: collapse; margin-top:15px;">
+<tr style="background-color:#222;">
+<th style="padding:10px; border:1px solid #333;">BMI Range</th>
+<th style="padding:10px; border:1px solid #333;">Category</th>
+<th style="padding:10px; border:1px solid #333;">Health Risk</th>
+</tr>
+
+<tr>
+<td style="padding:10px; border:1px solid #333;">Below 18.5</td>
+<td style="padding:10px; border:1px solid #333; color:#4fc3f7;">Underweight</td>
+<td style="padding:10px; border:1px solid #333;">Nutritional deficiency risk</td>
+</tr>
+
+<tr>
+<td style="padding:10px; border:1px solid #333;">18.5 – 22.9</td>
+<td style="padding:10px; border:1px solid #333; color:#66bb6a;">Normal</td>
+<td style="padding:10px; border:1px solid #333;">Low health risk</td>
+</tr>
+
+<tr>
+<td style="padding:10px; border:1px solid #333;">23 – 24.9</td>
+<td style="padding:10px; border:1px solid #333; color:#ffa726;">Overweight</td>
+<td style="padding:10px; border:1px solid #333;">Moderate risk</td>
+</tr>
+
+<tr>
+<td style="padding:10px; border:1px solid #333;">25 and above</td>
+<td style="padding:10px; border:1px solid #333; color:#ef5350;">Obese</td>
+<td style="padding:10px; border:1px solid #333;">High risk of lifestyle diseases</td>
+</tr>
+</table>
 
 <p>Learn more in our <a href="what-is-bmi.html">Complete BMI Guide</a>.</p>
 
@@ -163,3 +188,4 @@ document.getElementById("result").innerHTML =
 
 </body>
 </html>
+
