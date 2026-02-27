@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anil1266.github.io/bmicalculator/sitemap.xml
