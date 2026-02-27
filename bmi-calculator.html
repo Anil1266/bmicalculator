@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BMI Calculator - Fit Metrics Tool</title>
+<meta name="description" content="Free BMI Calculator. Check your Body Mass Index instantly and know your health category.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#121212;
+color:#ffffff;
+}
+
+.navbar{
+position:sticky;
+top:0;
+background:#1a1a1a;
+padding:15px;
+text-align:center;
+border-bottom:1px solid #2a2a2a;
+}
+
+.navbar a{
+color:#ffffff;
+margin:0 12px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.navbar a:hover{
+color:#4facfe;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:#1e1e1e;
+padding:25px;
+border-radius:12px;
+border:1px solid #2a2a2a;
+margin-top:40px;
+text-align:center;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border-radius:6px;
+border:1px solid #333;
+background:#222;
+color:#fff;
+font-size:16px;
+}
+
+input:focus{
+border-color:#4facfe;
+outline:none;
+box-shadow:0 0 6px #4facfe;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:6px;
+background:linear-gradient(90deg,#4facfe,#00f2fe);
+color:#fff;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 0 10px #4facfe;
+}
+
+.result{
+margin-top:15px;
+font-size:18px;
+font-weight:bold;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+text-align:center;
+}
+
+th,td{
+border:1px solid #333;
+padding:10px;
+}
+
+th{
+background:#222;
+}
+
+.footer{
+margin-top:60px;
+text-align:center;
+color:#aaa;
+font-size:14px;
+}
+
+a{color:#4facfe;}
+
+@media(max-width:600px){
+.navbar a{
+display:block;
+margin:8px 0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="calorie-calculator.html">Calorie</a>
+<a href="bmr-calculator.html">BMR</a>
+<a href="water-intake-calculator.html">Water Intake</a>
+<a href="ideal-weight-calculator.html">Ideal Weight</a>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h1>BMI Calculator</h1>
+
+<input type="number" id="weight" placeholder="Enter Weight (kg)">
+<input type="number" id="height" placeholder="Enter Height (cm)">
+
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<div class="result" id="result"></div>
+</div>
+
+<div class="card">
+<h2>BMI Categories</h2>
+
+<table>
+<tr>
+<th>BMI Range</th>
+<th>Category</th>
+<th>Health Risk</th>
+</tr>
+
+<tr>
+<td>Below 18.5</td>
+<td style="color:#4fc3f7;">Underweight</td>
+<td>Nutritional Risk</td>
+</tr>
+
+<tr>
+<td>18.5 – 22.9</td>
+<td style="color:#66bb6a;">Normal</td>
+<td>Low Risk</td>
+</tr>
+
+<tr>
+<td>23 – 24.9</td>
+<td style="color:#ffa726;">Overweight</td>
+<td>Moderate Risk</td>
+</tr>
+
+<tr>
+<td>25+</td>
+<td style="color:#ef5350;">Obese</td>
+<td>High Risk</td>
+</tr>
+
+</table>
+</div>
+
+<div class="footer">
+Contact: <a href="mailto:anilvella999@gmail.com">anilvella999@gmail.com</a><br>
+© 2026 Fit Metrics Tool
+</div>
+
+</div>
+
+<script>
+function calculateBMI(){
+var weight=document.getElementById("weight").value;
+var height=document.getElementById("height").value;
+
+if(weight==""||height==""){
+document.getElementById("result").innerHTML="Please enter valid values.";
+return;
+}
+
+height=height/100;
+var bmi=(weight/(height*height)).toFixed(2);
+
+var category="";
+var color="white";
+
+if(bmi<18.5){category="Underweight";color="#4fc3f7";}
+else if(bmi<23){category="Normal";color="#66bb6a";}
+else if(bmi<25){category="Overweight";color="#ffa726";}
+else{category="Obese";color="#ef5350";}
+
+document.getElementById("result").innerHTML=
+"Your BMI: "+bmi+"<br>Category: "+category;
+
+document.getElementById("result").style.color=color;
+}
+</script>
+
+</body>
+</html>
