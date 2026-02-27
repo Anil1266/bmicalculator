@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anil1266.github.io/bmicalculator/sitemap.xml
+Sitemap: https://anil1266.github.io/fitmetricstool/sitemap.xml
