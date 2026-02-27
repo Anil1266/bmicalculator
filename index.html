@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMI Calculator for Indian Men & Women 2026 | Free Online Tool</title>
+<meta name="description" content="Free BMI Calculator India. Calculate your BMI instantly and check your health category.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    margin: 8px 0;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    width: 95%;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #00c6ff;
+}
+
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0,0,0,0.1);
+    font-size: 14px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+    margin: 0 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main">
+    <div class="container">
+        <h2>BMI Calculator</h2>
+
+        <input type="number" id="weight" placeholder="Weight (kg)">
+        <input type="number" id="height" placeholder="Height (cm)">
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+<div class="footer">
+    <a href="about.html">About</a> |
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="disclaimer.html">Disclaimer</a> |
+    Contact: anilbmicalculator@gmail.com
+    <br><br>
+    © 2026 Anil BMI Calculator
+</div>
+
+<script>
+function calculateBMI() {
+    var weight = document.getElementById("weight").value;
+    var height = document.getElementById("height").value;
+
+    if (weight === "" || height === "") {
+        document.getElementById("result").innerHTML = "Please enter valid values.";
+        return;
+    }
+
+    height = height / 100;
+    var bmi = weight / (height * height);
+    bmi = bmi.toFixed(2);
+
+    var category = "";
+    var suggestion = "";
+
+    if (bmi < 18.5) {
+        category = "Underweight";
+        suggestion = '<br><br><a href="https://amzn.to/46ptCir" target="_blank" style="display:inline-block;padding:10px 15px;background:#ff6b6b;color:white;text-decoration:none;border-radius:5px;margin-top:10px;">View Recommended Products</a>';
+    } 
+    else if (bmi < 24.9) {
+        category = "Normal weight";
+        suggestion = '<br><br><a href="https://amzn.to/4u2Uijk" target="_blank">Maintain Fitness with Home Workout Tools</a>';
+    } 
+    else if (bmi < 29.9) {
+        category = "Overweight";
+        suggestion = '<br><br><a href="https://amzn.to/4rXgUQR" target="_blank" style="display:inline-block;padding:10px 15px;background:#ff6b6b;color:white;text-decoration:none;border-radius:5px;margin-top:10px;">View Recommended Products</a>';;
+    } 
+    else {
+        category = "Obese";
+        suggestion = '<br><br><a href="https://amzn.to/4kWjiob" target="_blank" style="display:inline-block;padding:10px 15px;background:#ff6b6b;color:white;text-decoration:none;border-radius:5px;margin-top:10px;">View Recommended Products</a>';
+    }
+
+    document.getElementById("result").innerHTML =
+        "Your BMI: " + bmi + "<br>Category: " + category + suggestion;
+}
+</script>
+
+</body>
+</html>
