@@ -244,30 +244,44 @@ Contact: <a href="mailto:anilvella999@gmail.com">anilvella999@gmail.com</a><br>
 </div>
 
 <script>
-function calculateBMI(){
-var weight=document.getElementById("weight").value;
-var height=document.getElementById("height").value;
+function calculateBMI() {
 
-if(weight==""||height==""){
-document.getElementById("result").innerHTML="Please enter valid values.";
+var height = document.getElementById("height").value;
+var weight = document.getElementById("weight").value;
+
+if(height=="" || weight==""){
+document.getElementById("result").innerHTML="Please fill all fields.";
 return;
 }
 
-height=height/100;
-var bmi=(weight/(height*height)).toFixed(2);
+height = height / 100;
+var bmi = weight / (height * height);
+bmi = bmi.toFixed(1);
 
-var category="";
-var color="white";
+var category = "";
+var suggestionText = "";
 
-if(bmi<18.5){category="Underweight";color="#4fc3f7";}
-else if(bmi<23){category="Normal";color="#66bb6a";}
-else if(bmi<25){category="Overweight";color="#ffa726";}
-else{category="Obese";color="#ef5350";}
+if (bmi < 18.5) {
+category = "Underweight";
+suggestionText = "You may consider a nutrient-rich diet and strength training to gain healthy weight.";
+}
+else if (bmi < 23) {
+category = "Normal weight";
+suggestionText = "Maintain your healthy lifestyle with regular exercise and balanced nutrition.";
+}
+else if (bmi < 25) {
+category = "Overweight";
+suggestionText = "Consider increasing physical activity and monitoring calorie intake.";
+}
+else {
+category = "Obese";
+suggestionText = "Consult a healthcare professional and consider structured fitness planning.";
+}
 
-document.getElementById("result").innerHTML=
-"Your BMI: "+bmi+"<br>Category: "+category;
+document.getElementById("result").innerHTML =
+"Your BMI: " + bmi + "<br>Category: " + category +
+"<br><br><strong>Suggestion:</strong> " + suggestionText;
 
-document.getElementById("result").style.color=color;
 }
 </script>
 <script type="application/ld+json">
