@@ -3,82 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FitMetrics Tools – Fitness & Health Calculators</title>
+<title>Daily Calorie Calculator | FitMetrics Tools</title>
 
 <style>
 
 body{
 font-family:Arial, sans-serif;
 margin:0;
-background:#f4f6f9;
+background:#0f0f0f;
+color:#fff;
 }
 
-header{
-background:#1e88e5;
-color:white;
-padding:25px;
-text-align:center;
+/* NAVIGATION */
+
+.top-nav{
+display:flex;
+justify-content:center;
+gap:25px;
+background:#111;
+padding:15px;
+flex-wrap:wrap;
 }
+
+.top-nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+padding:8px 14px;
+border-radius:6px;
+transition:0.2s;
+}
+
+.top-nav a:hover{
+background:#1e88e5;
+}
+
+/* CALCULATOR CARD */
 
 .container{
-max-width:900px;
+max-width:600px;
 margin:auto;
 padding:25px;
 }
 
-h2{
-text-align:center;
-margin-bottom:25px;
+.card{
+background:#1a1a1a;
+padding:25px;
+border-radius:12px;
+box-shadow:0 0 10px rgba(0,0,0,0.4);
 }
 
-/* GRID LAYOUT */
+.card h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border-radius:8px;
+border:none;
+background:#2b2b2b;
+color:white;
+}
+
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:8px;
+background:linear-gradient(90deg,#3fa9f5,#00c6ff);
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* FAQ */
+
+.faq{
+margin-top:30px;
+}
+
+.faq h2{
+margin-bottom:10px;
+}
+
+.faq p{
+color:#ccc;
+}
+
+/* TOOLS GRID */
+
+.tools-section{
+margin-top:40px;
+}
+
+.tools-section h2{
+margin-bottom:20px;
+}
 
 .tools-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:18px;
+gap:15px;
 }
 
-/* TOOL CARD */
-
 .tool-card{
-background:white;
-border-radius:10px;
+background:#1a1a1a;
 padding:18px;
+border-radius:10px;
 text-align:center;
 text-decoration:none;
-color:#333;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+color:white;
 transition:0.2s;
 }
 
 .tool-card:hover{
-transform:translateY(-3px);
-box-shadow:0 4px 14px rgba(0,0,0,0.15);
+background:#1e88e5;
 }
 
 .tool-card h3{
-margin-bottom:8px;
+margin-bottom:6px;
 }
 
-.tool-card p{
-font-size:14px;
-color:#666;
-}
-
-/* MOBILE */
-
-@media (max-width:600px){
-.tools-grid{
-grid-template-columns:repeat(2,1fr);
-}
-}
+/* FOOTER */
 
 footer{
 text-align:center;
-padding:20px;
+margin-top:40px;
+color:#aaa;
 font-size:14px;
-color:#777;
 }
 
 </style>
@@ -86,58 +141,101 @@ color:#777;
 
 <body>
 
-<header>
-<h1>FitMetrics Tools</h1>
-<p>Free Fitness & Health Calculators</p>
-</header>
+<!-- NAVBAR -->
+
+<nav class="top-nav">
+<a href="/">Home</a>
+<a href="/calorie-calculator.html">Calorie Calculator</a>
+<a href="/products.html">Products</a>
+<a href="/about.html">About</a>
+</nav>
 
 <div class="container">
 
-<h2>Popular Fitness & Health Calculators</h2>
+<div class="card">
+
+<h1>Daily Calorie Calculator</h1>
+
+<input type="number" placeholder="Enter Age">
+
+<select>
+<option>Male</option>
+<option>Female</option>
+</select>
+
+<input type="number" placeholder="Enter Weight (kg)">
+<input type="number" placeholder="Enter Height (cm)">
+
+<select>
+<option>Sedentary (little or no exercise)</option>
+<option>Lightly Active</option>
+<option>Moderately Active</option>
+<option>Very Active</option>
+</select>
+
+<button>Calculate Calories</button>
+
+</div>
+
+<!-- FAQ -->
+
+<div class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How accurate is a calorie calculator?</h3>
+<p>Calorie calculators provide an estimate. Individual metabolism may vary.</p>
+
+<h3>Should I eat exactly the number shown?</h3>
+<p>Use the number as a guideline and adjust based on your progress and health goals.</p>
+
+</div>
+
+<!-- TOOLS -->
+
+<div class="tools-section">
+
+<h2>Explore More Health Tools</h2>
 
 <div class="tools-grid">
 
-<a href="bmi-calculator.html" class="tool-card">
+<a href="/bmi-calculator.html" class="tool-card">
 <h3>BMI Calculator</h3>
-<p>Calculate your Body Mass Index and check your weight category.</p>
+<p>Check your body mass index.</p>
 </a>
 
-<a href="calorie-calculator.html" class="tool-card">
+<a href="/calorie-calculator.html" class="tool-card">
 <h3>Calorie Calculator</h3>
-<p>Estimate the daily calories your body needs.</p>
+<p>Estimate daily calorie needs.</p>
 </a>
 
-<a href="bmr-calculator.html" class="tool-card">
+<a href="/bmr-calculator.html" class="tool-card">
 <h3>BMR Calculator</h3>
-<p>Find your Basal Metabolic Rate to understand energy needs.</p>
+<p>Find your basal metabolic rate.</p>
 </a>
 
-<a href="water-intake-calculator.html" class="tool-card">
-<h3>Water Intake Calculator</h3>
-<p>Discover how much water your body should drink daily.</p>
+<a href="/water-intake-calculator.html" class="tool-card">
+<h3>Water Intake</h3>
+<p>Know your daily water needs.</p>
 </a>
 
-<a href="ideal-weight-calculator.html" class="tool-card">
-<h3>Ideal Weight Calculator</h3>
-<p>Check the healthy weight range for your height.</p>
+<a href="/ideal-weight-calculator.html" class="tool-card">
+<h3>Ideal Weight</h3>
+<p>Check healthy weight range.</p>
 </a>
-
-<!-- Enable this after creating the page -->
-
-<!--
-<a href="tdee-calculator.html" class="tool-card">
-<h3>TDEE Calculator</h3>
-<p>Estimate your Total Daily Energy Expenditure.</p>
-</a>
--->
 
 </div>
 
 </div>
 
 <footer>
-© 2026 FitMetrics Tools
+
+<p>Contact: anilvella999@gmail.com</p>
+<p>© 2026 Fit Metrics Tool</p>
+
 </footer>
+
+</div>
 
 </body>
 </html>
