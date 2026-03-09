@@ -110,6 +110,19 @@ display:block;
 margin-bottom:8px;
 }
 
+/* FAQ */
+
+.faq{
+margin-top:40px;
+}
+
+.faq-item{
+background:#1a1a1a;
+padding:15px;
+border-radius:10px;
+margin-bottom:12px;
+}
+
 footer{
 text-align:center;
 padding:30px;
@@ -190,6 +203,38 @@ grid-template-columns:repeat(2,1fr);
 
 </section>
 
+<!-- FAQ SECTION -->
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<h3>What is BMI?</h3>
+<p>
+Body Mass Index (BMI) is a measure that uses your height and weight to estimate
+whether your body weight is healthy.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>What is a healthy BMI range?</h3>
+<p>
+A healthy BMI for most adults is between 18.5 and 24.9. Values outside this range
+may indicate underweight, overweight, or obesity.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>Is BMI completely accurate?</h3>
+<p>
+BMI is a useful general guideline but it does not account for muscle mass,
+bone density, or body composition.
+</p>
+</div>
+
+</section>
+
 </div>
 
 <footer>
@@ -209,7 +254,7 @@ height=height/100;
 
 let bmi=weight/(height*height);
 
-document.getElementById("result").innerHTML=
+document.getElementById("result").innerHTML =
 "Your BMI: <b>"+bmi.toFixed(1)+"</b>";
 
 }
