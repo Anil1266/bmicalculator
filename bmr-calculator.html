@@ -1,214 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>BMR Calculator - Fit Metrics Tools</title>
-<meta name="description" content="Free BMR Calculator to estimate your Basal Metabolic Rate and understand your daily calorie needs.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://fitmetricstools.com/bmr-calculator.html">
+
+<title>BMR Calculator | FitMetrics Tools</title>
+
+<meta name="description" content="Calculate your Basal Metabolic Rate (BMR) to estimate how many calories your body burns at rest.">
 
 <style>
+
 body{
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
-font-family:Arial, sans-serif;
-background:#121212;
-color:#ffffff;
+background:#0f0f0f;
+color:white;
 }
 
+/* NAVBAR */
+
 .navbar{
-background:#1a1a1a;
-padding:15px;
-text-align:center;
-border-bottom:1px solid #2a2a2a;
+display:flex;
+justify-content:center;
+gap:30px;
+background:#111;
+padding:16px;
 }
 
 .navbar a{
-color:#ffffff;
-margin:0 12px;
+color:white;
 text-decoration:none;
 font-weight:bold;
 }
 
-.navbar a:hover{
-color:#4facfe;
-}
+/* CONTAINER */
 
 .container{
-max-width:900px;
+max-width:700px;
 margin:auto;
-padding:20px;
+padding:30px;
 }
+
+/* CARD */
 
 .card{
-background:#1e1e1e;
+background:#1a1a1a;
 padding:25px;
 border-radius:12px;
-border:1px solid #2a2a2a;
-margin-top:40px;
-text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,0.4);
 }
 
-input, select{
+input,select{
 width:100%;
 padding:12px;
 margin-bottom:12px;
-border-radius:6px;
-border:1px solid #333;
-background:#222;
-color:#fff;
-font-size:16px;
+border-radius:8px;
+border:none;
+background:#2c2c2c;
+color:white;
 }
 
 button{
 width:100%;
-padding:12px;
+padding:14px;
 border:none;
-border-radius:6px;
-background:linear-gradient(90deg,#4facfe,#00f2fe);
-color:#fff;
+border-radius:8px;
+background:linear-gradient(90deg,#3fa9f5,#00c6ff);
+color:white;
 font-size:16px;
 cursor:pointer;
 }
 
-button:hover{
-opacity:0.9;
-}
-
 .result{
-margin-top:15px;
+margin-top:20px;
 font-size:18px;
-font-weight:bold;
-}
-
-.footer{
-margin-top:60px;
 text-align:center;
-color:#aaa;
-font-size:14px;
-padding-bottom:30px;
 }
 
-a{color:#4facfe;}
+/* RELATED TOOLS */
 
-@media(max-width:600px){
-.navbar a{
+.related-tools{
+margin-top:40px;
+}
+
+.tools-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.tool-card{
+background:#1a1a1a;
+padding:18px;
+border-radius:10px;
+text-align:center;
+text-decoration:none;
+color:white;
+}
+
+.tool-card:hover{
+background:#1e88e5;
+}
+
+.tool-icon{
+font-size:28px;
 display:block;
-margin:8px 0;
+margin-bottom:8px;
 }
+
+footer{
+text-align:center;
+padding:30px;
+color:#aaa;
 }
+
+@media (max-width:768px){
+
+.tools-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="navbar">
-<a href="index.html">Home</a>
-<a href="bmi-calculator.html">BMI</a>
-<a href="calorie-calculator.html">Calorie</a>
-<a href="water-intake-calculator.html">Water Intake</a>
-<a href="ideal-weight-calculator.html">Ideal Weight</a>
-</div>
+<nav class="navbar">
+
+<a href="/">Home</a>
+<a href="/calorie-calculator.html">Calorie Calculator</a>
+
+</nav>
 
 <div class="container">
 
 <div class="card">
+
 <h1>BMR Calculator</h1>
 
 <input type="number" id="age" placeholder="Age">
+
 <select id="gender">
 <option value="male">Male</option>
 <option value="female">Female</option>
 </select>
+
 <input type="number" id="weight" placeholder="Weight (kg)">
 <input type="number" id="height" placeholder="Height (cm)">
 
 <button onclick="calculateBMR()">Calculate BMR</button>
 
 <div class="result" id="result"></div>
-</div>
-
-<!-- Educational Content Section -->
-
-<div style="margin-top:40px; text-align:left;">
-
-<h2>What is BMR?</h2>
-<p>Basal Metabolic Rate (BMR) represents the number of calories your body needs to perform basic life-sustaining functions such as breathing, circulation, and cell production while at rest.</p>
-
-<h2>Why BMR is Important</h2>
-<p>Understanding your BMR helps you determine how many calories your body requires daily before considering physical activity. It forms the foundation for calculating your total daily calorie needs.</p>
-
-<h2>How BMR is Calculated</h2>
-<p>This calculator uses the Mifflin-St Jeor equation, one of the most accurate formulas for estimating BMR. It considers age, gender, weight, and height.</p>
-
-<h2>BMR vs Total Daily Energy Expenditure (TDEE)</h2>
-<p>Your BMR represents calories burned at rest. To calculate total daily calorie needs, your BMR must be multiplied by your activity level.</p>
-
-<h2>Factors That Affect BMR</h2>
-<ul>
-<li>Muscle mass</li>
-<li>Age</li>
-<li>Gender</li>
-<li>Hormones</li>
-<li>Genetics</li>
-</ul>
-
-<h2>Frequently Asked Questions</h2>
-
-<h3>Is BMR the same as metabolism?</h3>
-<p>BMR is part of metabolism. It refers specifically to energy used while resting.</p>
-
-<h3>Can I increase my BMR?</h3>
-<p>Yes. Increasing muscle mass through strength training can help raise your BMR.</p>
 
 </div>
 
-<hr style="margin:40px 0; border-color:#333;">
+<!-- RELATED CALCULATORS -->
 
-<h2>Explore More Health Tools</h2>
-<ul>
-<li><a href="bmi-calculator.html">BMI Calculator</a></li>
-<li><a href="calorie-calculator.html">Calorie Calculator</a></li>
-<li><a href="bmr-calculator.html">BMR Calculator</a></li>
-<li><a href="water-intake-calculator.html">Water Intake Calculator</a></li>
-<li><a href="ideal-weight-calculator.html">Ideal Weight Calculator</a></li>
-</ul>
+<section class="related-tools">
 
-<hr style="margin:40px 0; border-color:#333;">
+<h2>Related Health Calculators</h2>
 
-<div style="display:grid; gap:15px;">
+<div class="tools-grid">
+
+<a href="/bmi-calculator.html" class="tool-card">
+<span class="tool-icon">⚖️</span>
+<h3>BMI Calculator</h3>
+</a>
+
+<a href="/calorie-calculator.html" class="tool-card">
+<span class="tool-icon">🔥</span>
+<h3>Calorie Calculator</h3>
+</a>
+
+<a href="/tdee-calculator.html" class="tool-card">
+<span class="tool-icon">📊</span>
+<h3>TDEE Calculator</h3>
+</a>
+
+<a href="/water-intake-calculator.html" class="tool-card">
+<span class="tool-icon">💧</span>
+<h3>Water Intake</h3>
+</a>
+
+<a href="/ideal-weight-calculator.html" class="tool-card">
+<span class="tool-icon">🏃</span>
+<h3>Ideal Weight</h3>
+</a>
 
 </div>
 
-<div class="footer">
-<a href="privacy-policy.html">Privacy Policy</a> |
-<a href="disclaimer.html">Disclaimer</a><br>
-© 2026 Fit Metrics Tools
-</div>
+</section>
 
 </div>
+
+<footer>
+
+<p>© 2026 FitMetrics Tools</p>
+
+</footer>
 
 <script>
+
 function calculateBMR(){
-var age=document.getElementById("age").value;
-var gender=document.getElementById("gender").value;
-var weight=document.getElementById("weight").value;
-var height=document.getElementById("height").value;
 
-if(age==""||weight==""||height==""){
-document.getElementById("result").innerHTML="Please fill all fields.";
-return;
-}
+let age=document.getElementById("age").value;
+let gender=document.getElementById("gender").value;
+let weight=document.getElementById("weight").value;
+let height=document.getElementById("height").value;
 
-var bmr;
-if(gender=="male"){
-bmr=(10*weight)+(6.25*height)-(5*age)+5;
+let bmr;
+
+if(gender==="male"){
+bmr=10*weight+6.25*height-5*age+5;
 }else{
-bmr=(10*weight)+(6.25*height)-(5*age)-161;
+bmr=10*weight+6.25*height-5*age-161;
 }
 
-document.getElementById("result").innerHTML="Your BMR: "+Math.round(bmr)+" calories/day";
+document.getElementById("result").innerHTML=
+"Your BMR: <b>"+Math.round(bmr)+" calories/day</b>";
+
 }
+
 </script>
 
 </body>
+
 </html>
