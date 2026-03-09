@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,7 +7,7 @@
 
 <title>FitMetrics Tools | Free Fitness Calculators</title>
 
-<meta name="description" content="Free fitness calculators including BMI calculator, calorie calculator, BMR calculator and water intake calculator.">
+<meta name="description" content="Free fitness calculators including BMI calculator, calorie calculator, BMR calculator, TDEE calculator and water intake calculator. Improve your health with FitMetrics Tools.">
 
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
@@ -73,6 +72,30 @@ color:#333;
 border-radius:8px;
 text-decoration:none;
 font-weight:bold;
+}
+
+/* SEARCH */
+
+.search-box{
+display:flex;
+justify-content:center;
+margin-top:25px;
+}
+
+.search-box input{
+width:50%;
+padding:12px;
+border:none;
+border-radius:8px 0 0 8px;
+}
+
+.search-box button{
+padding:12px 18px;
+border:none;
+background:#1e88e5;
+color:white;
+border-radius:0 8px 8px 0;
+cursor:pointer;
 }
 
 /* CONTAINER */
@@ -181,6 +204,10 @@ grid-template-columns:repeat(2,1fr);
 font-size:26px;
 }
 
+.search-box input{
+width:65%;
+}
+
 }
 
 </style>
@@ -199,6 +226,7 @@ font-size:26px;
 <section class="hero">
 
 <h1>FitMetrics Tools</h1>
+
 <p>Free Fitness Calculators To Improve Your Health</p>
 
 <div class="hero-buttons">
@@ -208,29 +236,40 @@ font-size:26px;
 
 </section>
 
+<div class="search-box">
+
+<input type="text" placeholder="Search health calculators...">
+
+<button>Search</button>
+
+</div>
+
 <div class="container">
 
-<h2>Popular Health Calculators</h2>
+<h2>Featured Calculators</h2>
 
 <div class="tools-grid">
 
 <a href="/bmi-calculator.html" class="tool-card">
 <span class="tool-icon">⚖️</span>
 <h3>BMI Calculator</h3>
-<p>Check your body mass index.</p>
 </a>
 
 <a href="/calorie-calculator.html" class="tool-card">
 <span class="tool-icon">🔥</span>
 <h3>Calorie Calculator</h3>
-<p>Estimate daily calorie needs.</p>
 </a>
 
 <a href="/bmr-calculator.html" class="tool-card">
 <span class="tool-icon">💪</span>
 <h3>BMR Calculator</h3>
-<p>Find your metabolic rate.</p>
 </a>
+
+</div>
+
+<h2>Popular Health Calculators</h2>
+
+<div class="tools-grid">
 
 <a href="/water-intake-calculator.html" class="tool-card">
 <span class="tool-icon">💧</span>
@@ -307,6 +346,7 @@ Healthy Lifestyle Guide
 <footer>
 
 <p>© 2026 FitMetrics Tools</p>
+
 <p>Contact: anilvella999@gmail.com</p>
 
 </footer>
