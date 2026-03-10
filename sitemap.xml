@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fitmetricstools.com/</loc>
-<priority>1.0</priority>
 </url>
 
 <url>
@@ -19,6 +19,10 @@
 </url>
 
 <url>
+<loc>https://fitmetricstools.com/tdee-calculator.html</loc>
+</url>
+
+<url>
 <loc>https://fitmetricstools.com/water-intake-calculator.html</loc>
 </url>
 
@@ -27,35 +31,31 @@
 </url>
 
 <url>
-<loc>https://fitmetricstools.com/complete-guide-bmi-calories-weight-management.html</loc>
+<loc>https://fitmetricstools.com/how-many-calories-do-i-need.html</loc>
 </url>
 
 <url>
-<loc>https://fitmetricstools.com/what-is-bmi.html</loc>
+<loc>https://fitmetricstools.com/bmi-explained.html</loc>
 </url>
 
 <url>
-<loc>https://fitmetricstools.com/how-many-calories-per-day.html</loc>
+<loc>https://fitmetricstools.com/daily-water-intake-guide.html</loc>
 </url>
 
 <url>
-<loc>https://fitmetricstools.com/how-to-lose-weight-safely.html</loc>
+<loc>https://fitmetricstools.com/articles.html</loc>
 </url>
 
 <url>
-<loc>https://fitmetricstools.com/best-diet-for-weight-gain.html</loc>
+<loc>https://fitmetricstools.com/weight-loss-guide.html</loc>
 </url>
 
 <url>
-<loc>https://fitmetricstools.com/water-intake-per-kg.html</loc>
+<loc>https://fitmetricstools.com/muscle-gain-guide.html</loc>
 </url>
 
 <url>
-<loc>https://fitmetricstools.com/how-many-calories-to-lose-5kg.html</loc>
-</url>
-
-<url>
-<loc>https://fitmetricstools.com/bmi-for-indian-adults.html</loc>
+<loc>https://fitmetricstools.com/healthy-lifestyle-guide.html</loc>
 </url>
 
 <url>
@@ -63,7 +63,15 @@
 </url>
 
 <url>
-<loc>https://fitmetricstools.com/disclaimer.html</loc>
+<loc>https://fitmetricstools.com/terms.html</loc>
+</url>
+
+<url>
+<loc>https://fitmetricstools.com/about.html</loc>
+</url>
+
+<url>
+<loc>https://fitmetricstools.com/contact.html</loc>
 </url>
 
 </urlset>
