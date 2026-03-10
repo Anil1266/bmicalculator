@@ -8,7 +8,7 @@
 
 <title>BMI Calculator | FitMetrics Tools</title>
 
-<meta name="description" content="Calculate your Body Mass Index (BMI) to determine whether your weight is healthy.">
+<meta name="description" content="Use this free BMI calculator to check your body mass index and see if your weight is healthy.">
 
 <style>
 
@@ -18,8 +18,6 @@ margin:0;
 background:#0f0f0f;
 color:white;
 }
-
-/* NAVBAR */
 
 .navbar{
 display:flex;
@@ -35,21 +33,16 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* CONTAINER */
-
 .container{
 max-width:700px;
 margin:auto;
 padding:30px;
 }
 
-/* CARD */
-
 .card{
 background:#1a1a1a;
 padding:25px;
 border-radius:12px;
-box-shadow:0 0 10px rgba(0,0,0,0.4);
 }
 
 input{
@@ -69,7 +62,6 @@ border:none;
 border-radius:8px;
 background:linear-gradient(90deg,#3fa9f5,#00c6ff);
 color:white;
-font-size:16px;
 cursor:pointer;
 }
 
@@ -79,7 +71,13 @@ font-size:18px;
 text-align:center;
 }
 
-/* RELATED TOOLS */
+.info-section{
+margin-top:30px;
+background:#1a1a1a;
+padding:20px;
+border-radius:10px;
+line-height:1.7;
+}
 
 .related-tools{
 margin-top:40px;
@@ -110,8 +108,6 @@ display:block;
 margin-bottom:8px;
 }
 
-/* FAQ */
-
 .faq{
 margin-top:40px;
 }
@@ -130,11 +126,9 @@ color:#aaa;
 }
 
 @media (max-width:768px){
-
 .tools-grid{
 grid-template-columns:repeat(2,1fr);
 }
-
 }
 
 </style>
@@ -165,6 +159,33 @@ grid-template-columns:repeat(2,1fr);
 <div class="result" id="result"></div>
 
 </div>
+
+<!-- EXPLANATION SECTION -->
+
+<section class="info-section">
+
+<h2>What Is BMI?</h2>
+
+<p>
+Body Mass Index (BMI) is a measurement that uses your height and weight
+to estimate whether your body weight falls within a healthy range.
+</p>
+
+<p>
+BMI is commonly used by health professionals as a quick screening tool
+to identify possible weight-related health risks.
+</p>
+
+<h3>BMI Categories</h3>
+
+<ul>
+<li>Underweight: BMI below 18.5</li>
+<li>Normal weight: BMI 18.5 – 24.9</li>
+<li>Overweight: BMI 25 – 29.9</li>
+<li>Obesity: BMI 30 or higher</li>
+</ul>
+
+</section>
 
 <!-- RELATED CALCULATORS -->
 
@@ -203,7 +224,7 @@ grid-template-columns:repeat(2,1fr);
 
 </section>
 
-<!-- FAQ SECTION -->
+<!-- FAQ -->
 
 <section class="faq">
 
@@ -212,24 +233,23 @@ grid-template-columns:repeat(2,1fr);
 <div class="faq-item">
 <h3>What is BMI?</h3>
 <p>
-Body Mass Index (BMI) is a measure that uses your height and weight to estimate
-whether your body weight is healthy.
+BMI is a number calculated from your height and weight that helps
+estimate whether your body weight is healthy.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>Is BMI accurate for everyone?</h3>
+<p>
+BMI is a useful general guideline but does not consider muscle mass,
+body composition, or other health factors.
 </p>
 </div>
 
 <div class="faq-item">
 <h3>What is a healthy BMI range?</h3>
 <p>
-A healthy BMI for most adults is between 18.5 and 24.9. Values outside this range
-may indicate underweight, overweight, or obesity.
-</p>
-</div>
-
-<div class="faq-item">
-<h3>Is BMI completely accurate?</h3>
-<p>
-BMI is a useful general guideline but it does not account for muscle mass,
-bone density, or body composition.
+For most adults, a BMI between 18.5 and 24.9 is considered healthy.
 </p>
 </div>
 
