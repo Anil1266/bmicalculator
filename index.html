@@ -33,6 +33,36 @@ text-decoration:none;
 font-weight:bold;
 }
 
+/* HERO */
+
+.hero{
+text-align:center;
+padding:60px 20px;
+background:linear-gradient(135deg,#1e88e5,#00c6ff);
+}
+
+.hero h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.hero-buttons a{
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+background:white;
+color:#333;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* CONTAINER */
+
 .container{
 max-width:1100px;
 margin:auto;
@@ -73,7 +103,6 @@ margin-bottom:10px;
 .tool-card p{
 font-size:14px;
 color:#bbb;
-margin-top:5px;
 }
 
 /* ARTICLES */
@@ -124,6 +153,10 @@ text-decoration:underline;
 grid-template-columns:repeat(2,1fr);
 }
 
+.hero h1{
+font-size:26px;
+}
+
 }
 
 </style>
@@ -133,14 +166,25 @@ grid-template-columns:repeat(2,1fr);
 <body>
 
 <nav class="navbar">
-
 <a href="/">Home</a>
-
 </nav>
+
+<section class="hero">
+
+<h1>FitMetrics Tools</h1>
+
+<p>Free Health & Fitness Calculators To Improve Your Lifestyle</p>
+
+<div class="hero-buttons">
+<a href="/bmi-calculator.html">BMI Calculator</a>
+<a href="/calorie-calculator.html">Calorie Calculator</a>
+</div>
+
+</section>
 
 <div class="container">
 
-<h2 id="calculators">Health Calculators</h2>
+<h2>Health Calculators</h2>
 
 <div class="tools-grid">
 
