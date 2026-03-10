@@ -1,134 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Calorie Calculator - Daily Calorie Needs</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://fitmetricstools.com/bmi-calculator.html">
+
+<title>Calorie Calculator | FitMetrics Tools</title>
+
+<meta name="description" content="Estimate how many calories you need each day based on age, gender, height, weight, and activity level.">
 
 <style>
+
 body{
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
-font-family:Arial, sans-serif;
-background:#121212;
-color:#ffffff;
+background:#0f0f0f;
+color:white;
 }
 
 .navbar{
-position:sticky;
-top:0;
-background:#1a1a1a;
-padding:15px;
-text-align:center;
-border-bottom:1px solid #2a2a2a;
+display:flex;
+justify-content:center;
+gap:30px;
+background:#111;
+padding:16px;
 }
 
 .navbar a{
-color:#ffffff;
-margin:0 15px;
+color:white;
 text-decoration:none;
 font-weight:bold;
 }
 
-.navbar a:hover{
-color:#4facfe;
-}
-
 .container{
-max-width:900px;
+max-width:700px;
 margin:auto;
-padding:20px;
+padding:30px;
 }
 
 .card{
-background:#1e1e1e;
+background:#1a1a1a;
 padding:25px;
 border-radius:12px;
-border:1px solid #2a2a2a;
-margin-top:20px;
-text-align:center;
 }
 
-input, select{
+input,select{
 width:100%;
 padding:12px;
-margin-bottom:10px;
-border-radius:6px;
-border:1px solid #333;
-background:#222;
-color:#fff;
-font-size:16px;
+margin-bottom:12px;
+border-radius:8px;
+border:none;
+background:#2c2c2c;
+color:white;
 }
 
 button{
 width:100%;
-padding:12px;
-border-radius:6px;
+padding:14px;
 border:none;
-background:linear-gradient(90deg,#4facfe,#00f2fe);
+border-radius:8px;
+background:linear-gradient(90deg,#3fa9f5,#00c6ff);
 color:white;
 cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-transform:scale(1.05);
-box-shadow:0 0 10px #4facfe;
 }
 
 .result{
-margin-top:15px;
-font-weight:bold;
+margin-top:20px;
 font-size:18px;
-}
-
-.footer{
-margin-top:40px;
 text-align:center;
-color:#aaa;
-font-size:14px;
 }
 
-a{color:#4facfe;}
+.info-section{
+margin-top:30px;
+background:#1a1a1a;
+padding:20px;
+border-radius:10px;
+line-height:1.7;
+}
 
-@media(max-width:600px){
-.navbar a{
+.related-tools{
+margin-top:40px;
+}
+
+.tools-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.tool-card{
+background:#1a1a1a;
+padding:18px;
+border-radius:10px;
+text-align:center;
+text-decoration:none;
+color:white;
+}
+
+.tool-card:hover{
+background:#1e88e5;
+}
+
+.tool-icon{
+font-size:28px;
 display:block;
-margin:8px 0;
+margin-bottom:8px;
+}
+
+.faq{
+margin-top:40px;
+}
+
+.faq-item{
+background:#1a1a1a;
+padding:15px;
+border-radius:10px;
+margin-bottom:12px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#aaa;
+}
+
+@media (max-width:768px){
+.tools-grid{
+grid-template-columns:repeat(2,1fr);
 }
 }
+
 </style>
+
 </head>
 
 <body>
 
-<div class="navbar">
-<a href="index.html">Home</a>
-<a href="calorie-calculator.html">Calorie Calculator</a>
-<a href="products.html">Products</a>
-<a href="about.html">About</a>
-</div>
+<nav class="navbar">
+
+<a href="/">Home</a>
+<a href="/bmi-calculator.html">BMI Calculator</a>
+
+</nav>
 
 <div class="container">
 
 <div class="card">
 
-<h1>Daily Calorie Calculator</h1>
+<h1>Calorie Calculator</h1>
 
-<input type="number" id="age" placeholder="Enter Age">
+<input type="number" id="age" placeholder="Age">
+
 <select id="gender">
 <option value="male">Male</option>
 <option value="female">Female</option>
 </select>
-<input type="number" id="weight" placeholder="Enter Weight (kg)">
-<input type="number" id="height" placeholder="Enter Height (cm)">
+
+<input type="number" id="weight" placeholder="Weight (kg)">
+<input type="number" id="height" placeholder="Height (cm)">
 
 <select id="activity">
 <option value="1.2">Sedentary (little or no exercise)</option>
-<option value="1.375">Lightly Active (1-3 days/week)</option>
-<option value="1.55">Moderately Active (3-5 days/week)</option>
-<option value="1.725">Very Active (6-7 days/week)</option>
-<option value="1.9">Extra Active (hard exercise)</option>
+<option value="1.375">Light exercise (1–3 days/week)</option>
+<option value="1.55">Moderate exercise (3–5 days/week)</option>
+<option value="1.725">Heavy exercise (6–7 days/week)</option>
+<option value="1.9">Very heavy exercise</option>
 </select>
 
 <button onclick="calculateCalories()">Calculate Calories</button>
@@ -137,100 +174,137 @@ margin:8px 0;
 
 </div>
 
-<div style="margin-top:40px; text-align:left;">
+<!-- EXPLANATION -->
 
-<h2>What is a Calorie Calculator?</h2>
-<p>A calorie calculator estimates how many calories your body needs daily to maintain, lose, or gain weight. It uses your age, gender, weight, height, and activity level to calculate your daily energy requirements.</p>
+<section class="info-section">
 
-<h2>How Daily Calories Are Calculated</h2>
-<p>This calculator first estimates your Basal Metabolic Rate (BMR), which is the number of calories your body burns at rest. It then multiplies your BMR by an activity factor to determine your total daily calorie needs.</p>
+<h2>What Is a Calorie Calculator?</h2>
 
-<h2>Why Knowing Your Calorie Needs is Important</h2>
-<p>Understanding your daily calorie requirement helps you:</p>
+<p>
+A calorie calculator estimates the number of calories your body needs each day
+based on factors like age, gender, height, weight, and physical activity.
+</p>
+
+<p>
+Understanding your daily calorie needs helps you manage your weight,
+maintain energy levels, and achieve fitness goals.
+</p>
+
+<h3>Why Daily Calories Matter</h3>
+
 <ul>
-<li>Maintain a healthy weight</li>
-<li>Plan balanced meals</li>
-<li>Support muscle gain</li>
-<li>Reduce body fat safely</li>
-<li>Improve overall health</li>
+<li>Helps maintain healthy body weight</li>
+<li>Supports muscle growth</li>
+<li>Provides energy for daily activities</li>
+<li>Helps plan balanced nutrition</li>
 </ul>
 
-<h2>Calories for Weight Loss</h2>
-<p>To lose weight, you generally need to consume fewer calories than your body burns. A safe calorie deficit is usually 300–500 calories per day.</p>
+</section>
 
-<h2>Calories for Muscle Gain</h2>
-<p>For healthy weight gain, increase your calorie intake gradually while combining it with strength training exercises.</p>
+<!-- RELATED TOOLS -->
 
-<h2>Factors That Affect Calorie Needs</h2>
-<ul>
-<li>Age</li>
-<li>Gender</li>
-<li>Activity level</li>
-<li>Muscle mass</li>
-<li>Metabolism</li>
-</ul>
+<section class="related-tools">
+
+<h2>Related Health Calculators</h2>
+
+<div class="tools-grid">
+
+<a href="/bmi-calculator.html" class="tool-card">
+<span class="tool-icon">⚖️</span>
+<h3>BMI Calculator</h3>
+</a>
+
+<a href="/bmr-calculator.html" class="tool-card">
+<span class="tool-icon">💪</span>
+<h3>BMR Calculator</h3>
+</a>
+
+<a href="/tdee-calculator.html" class="tool-card">
+<span class="tool-icon">📊</span>
+<h3>TDEE Calculator</h3>
+</a>
+
+<a href="/water-intake-calculator.html" class="tool-card">
+<span class="tool-icon">💧</span>
+<h3>Water Intake</h3>
+</a>
+
+<a href="/ideal-weight-calculator.html" class="tool-card">
+<span class="tool-icon">🏃</span>
+<h3>Ideal Weight</h3>
+</a>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="faq">
 
 <h2>Frequently Asked Questions</h2>
 
-<h3>How accurate is a calorie calculator?</h3>
-<p>Calorie calculators provide an estimate. Individual metabolism may vary.</p>
+<div class="faq-item">
+<h3>How many calories should I eat per day?</h3>
+<p>
+Daily calorie needs vary depending on age, body size, and activity level.
+Most adults need between 1,800 and 2,800 calories per day.
+</p>
+</div>
 
-<h3>Should I eat exactly the number shown?</h3>
-<p>Use the number as a guideline and adjust based on your progress and health goals.</p>
+<div class="faq-item">
+<h3>How do I lose weight using calories?</h3>
+<p>
+Weight loss typically requires consuming fewer calories than your body burns,
+creating a calorie deficit.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>Is calorie counting necessary?</h3>
+<p>
+Calorie counting can help some people understand their eating habits
+and manage their weight effectively.
+</p>
+</div>
+
+</section>
 
 </div>
 
-<hr style="margin:40px 0; border-color:#333;">
+<footer>
 
-<h2>Explore More Health Tools</h2>
-<ul>
-<li><a href="bmi-calculator.html">BMI Calculator</a></li>
-<li><a href="calorie-calculator.html">Calorie Calculator</a></li>
-<li><a href="bmr-calculator.html">BMR Calculator</a></li>
-<li><a href="water-intake-calculator.html">Water Intake Calculator</a></li>
-<li><a href="ideal-weight-calculator.html">Ideal Weight Calculator</a></li>
-</ul>
+<p>© 2026 FitMetrics Tools</p>
 
-<hr style="margin:40px 0; border-color:#333;">
-
-<div style="display:grid; gap:15px;">
-
-<div class="footer">
-Contact: <a href="mailto:anilvella999@gmail.com">anilvella999@gmail.com</a><br>
-© 2026 Fit Metrics Tool
-</div>
-
-</div>
+</footer>
 
 <script>
+
 function calculateCalories(){
 
-var age = document.getElementById("age").value;
-var gender = document.getElementById("gender").value;
-var weight = document.getElementById("weight").value;
-var height = document.getElementById("height").value;
-var activity = document.getElementById("activity").value;
+let age=document.getElementById("age").value;
+let gender=document.getElementById("gender").value;
+let weight=document.getElementById("weight").value;
+let height=document.getElementById("height").value;
+let activity=document.getElementById("activity").value;
 
-if(age==""||weight==""||height==""){
-document.getElementById("result").innerHTML="Please fill all fields.";
-return;
-}
+let bmr;
 
-var bmr;
-
-if(gender=="male"){
-bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+if(gender==="male"){
+bmr=10*weight+6.25*height-5*age+5;
 }else{
-bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+bmr=10*weight+6.25*height-5*age-161;
 }
 
-var calories = bmr * activity;
-calories = Math.round(calories);
+let calories=bmr*activity;
 
 document.getElementById("result").innerHTML =
-"Your Daily Calorie Needs: " + calories + " kcal";
+"Estimated daily calories: <b>"+Math.round(calories)+" kcal</b>";
+
 }
+
 </script>
 
 </body>
+
 </html>
