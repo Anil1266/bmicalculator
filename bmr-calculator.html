@@ -1,69 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="/styles.css">
-
 <title>BMR Calculator | FitMetrics Tools</title>
 
-<meta name="description" content="Calculate your Basal Metabolic Rate (BMR) to estimate how many calories your body burns at rest.">
-
+<link rel="stylesheet" href="/styles.css">
 
 </head>
-
-<div class="container">
-
-<div class="calculator-card">
-
-<h1>🔥 Calculator Title</h1>
-
-<p>Short description of the calculator.</p>
-
-<input type="number" placeholder="Age">
-
-<select>
-<option>Male</option>
-<option>Female</option>
-</select>
-
-<input type="number" placeholder="Weight (kg)">
-<input type="number" placeholder="Height (cm)">
-
-<select>
-<option>Sedentary (little or no exercise)</option>
-<option>Light exercise</option>
-<option>Moderate exercise</option>
-<option>Heavy exercise</option>
-</select>
-
-<button>Calculate</button>
-
-<div id="result"></div>
-
-</div>
-
-<div class="info-section">
-
-<h2>How to Use the Calculator</h2>
-
-<p>This calculator helps estimate your health metrics based on your inputs.</p>
-
-<h3>Steps</h3>
-
-<ul>
-<li>Enter required information</li>
-<li>Select options</li>
-<li>Click calculate</li>
-<li>View results instantly</li>
-</ul>
-
-</div>
-
-</div>
 
 <body>
 
@@ -84,154 +30,22 @@
 
 </div>
 </header>
-  
-<nav class="navbar">
-
-<a href="/">Home</a>
-<a href="/calorie-calculator.html">Calorie Calculator</a>
-
-</nav>
-
-<header class="site-header">
-
-<h1>FitMetrics Tools</h1>
-
-<p>Free Health & Fitness Calculators</p>
-
-</header>
 
 <div class="container">
 
-<div class="card">
+<div class="calculator-card">
 
-<h1>💪 BMR Calculator</h1>
+<h1>BMR Calculator</h1>
 
-<input type="number" id="age" placeholder="Age">
+<input type="number" placeholder="Age">
+<input type="number" placeholder="Weight (kg)">
+<input type="number" placeholder="Height (cm)">
 
-<select id="gender">
-<option value="male">Male</option>
-<option value="female">Female</option>
-</select>
-
-<input type="number" id="weight" placeholder="Weight (kg)">
-<input type="number" id="height" placeholder="Height (cm)">
-
-<button onclick="calculateBMR()">Calculate BMR</button>
-
-<div class="result" id="result"></div>
+<button>Calculate BMR</button>
 
 </div>
 
-<section class="info-section">
-
-<h2>How to Use the BMR Calculator</h2>
-
-<p>
-The BMR calculator estimates how many calories your body burns at rest.
-This is called your Basal Metabolic Rate (BMR).
-</p>
-
-<h3>Steps to Calculate Your BMR</h3>
-
-<ul>
-<li>Enter your age</li>
-<li>Select your gender</li>
-<li>Enter your weight in kilograms</li>
-<li>Enter your height in centimeters</li>
-<li>Click the calculate button</li>
-</ul>
-
-<h2>Why BMR Is Important</h2>
-
-<p>
-Your BMR represents the number of calories your body needs
-to perform basic functions like breathing, circulation,
-and maintaining body temperature.
-</p>
-
-<p>
-Knowing your BMR can help you plan your daily calorie intake
-for weight loss, maintenance, or muscle gain.
-</p>
-
-</section>
-
-<!-- RELATED CALCULATORS -->
-
-<section class="related-tools">
-
-<h2>Related Health Calculators</h2>
-
-<div class="tools-grid">
-
-<a href="/bmi-calculator.html" class="tool-card">
-<span class="tool-icon">⚖️</span>
-<h3>BMI Calculator</h3>
-</a>
-
-<a href="/calorie-calculator.html" class="tool-card">
-<span class="tool-icon">🔥</span>
-<h3>Calorie Calculator</h3>
-</a>
-
-<a href="/tdee-calculator.html" class="tool-card">
-<span class="tool-icon">📊</span>
-<h3>TDEE Calculator</h3>
-</a>
-
-<a href="/water-intake-calculator.html" class="tool-card">
-<span class="tool-icon">💧</span>
-<h3>Water Intake</h3>
-</a>
-
-<a href="/ideal-weight-calculator.html" class="tool-card">
-<span class="tool-icon">🏃</span>
-<h3>Ideal Weight</h3>
-</a>
-
 </div>
-
-</section>
-
-</div>
-
-<footer>
-
-<p>© 2026 FitMetrics Tools</p>
-
-<p>
-<a href="/privacy-policy.html">Privacy Policy</a> |
-<a href="/terms.html">Terms</a> |
-<a href="/about.html">About</a> |
-<a href="/contact.html">Contact</a>
-</p>
-
-</footer>
-
-<script>
-
-function calculateBMR(){
-
-let age=document.getElementById("age").value;
-let gender=document.getElementById("gender").value;
-let weight=document.getElementById("weight").value;
-let height=document.getElementById("height").value;
-
-let bmr;
-
-if(gender==="male"){
-bmr=10*weight+6.25*height-5*age+5;
-}else{
-bmr=10*weight+6.25*height-5*age-161;
-}
-
-document.getElementById("result").innerHTML=
-"Your BMR: <b>"+Math.round(bmr)+" calories/day</b>";
-
-}
-
-</script>
 
 </body>
-
 </html>
